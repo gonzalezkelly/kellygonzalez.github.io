@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+</head>
+
+<body>
+<h1>Kelly Gonzalez</h1>
+<h2>Contact Me</h2>
+<form method="post" name="myemailform" action="mailto:gonzalezk@avoneagles.org" enctype="text/plain"> Enter Name: <input type="text" name="name"> <br> Enter Email Address: <input type="text" name="email"> <br>Enter Message: <textarea name="message"></textarea> <br> <input type="submit" value="Send Form"> </form>
+<script language="JavaScript">
+var frmvalidator  = new Validator("myemailform");
+frmvalidator.addValidation("name","req","Please provide your name"); 
+frmvalidator.addValidation("email","req","Please provide your email"); 
+frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+</script>
+</body>
+</html>
